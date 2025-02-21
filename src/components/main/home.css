@@ -1,0 +1,33 @@
+.home-container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-form {
+  width: 38rem;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #6daaec7e;
+  box-shadow: 7px 7px 5px #0e345c;
+  border-radius: 4rem;
+}
+.home-form div {
+  display: block;
+  color: #d0e2f5;
+}
+.home-header {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+.user-link{
+    text-decoration: none;
+}
+h1{
+    color:  #d0e2f5;
+}
+

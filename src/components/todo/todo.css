@@ -1,0 +1,139 @@
+.todo-container {
+  width: 100%;
+  /* height: 70vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+.todo-form {
+  width: 47rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #6daaec7e;
+  box-shadow: 7px 7px 5px #0e345c;
+  border-radius: 4rem;
+}
+.todo-form div {
+  color: #d0e2f5;
+}
+.todo-header {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  /* margin: auto 4rem; */
+}
+.todo-delete-btn {
+  /* width: 20rem; */
+  display: flex;
+  text-align: center;
+  /* margin: 1.3rem 0.2rem; */
+}
+.todo-delete-btn button {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5rem;
+  background-color: #0c3764;
+  color: #d0e2f5;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #0b315a;
+  box-shadow: 5px 5px 5px #011b36;
+  /* margin: 1px 10px; */
+}
+.todo-delete-btn button:hover {
+  background-color: #072a50;
+}
+.from-control {
+  margin: 20px 7px;
+}
+.inputbox {
+  display: flex;
+}
+.from-control input {
+  width: 15rem;
+  height: 2.4rem;
+  border-radius: 1.3rem;
+  padding: 0.9rem;
+  background-color: transparent;
+  border: 1px solid #6dabec;
+  color: #d5e3f1;
+  box-shadow: 7px 7px 5px #0e345c;
+}
+.todo-btn {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 1.3rem 0.2rem;
+}
+.todo-btn button {
+  width: 10rem;
+  height: 2.8rem;
+  border-radius: 5rem;
+  background-color: #0c3764;
+  color: #d0e2f5;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid #0b315a;
+  box-shadow: 5px 5px 5px #011b36;
+  margin: 1px 10px;
+}
+.todo-btn button:hover {
+  background-color: #072a50;
+}
+.error-mes {
+  height: 5px;
+  text-align: center;
+  margin: 0.4rem auto 0 auto;
+  color: rgb(201, 57, 57);
+}
+.table-container {
+  width: 100%;
+  /* height: 70vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+.todo-table {
+  width: 55rem;
+  min-height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #6daaec7e;
+  box-shadow: 7px 7px 5px #0e345c;
+  border-radius: 4rem;
+}
+.todo-table div {
+  color: #d0e2f5;
+}
+table {
+  background-color: #0e345c;
+ 
+}
+tr {
+  
+  display: flex;
+}
+th,
+td {
+  width: 100%;
+  /* height: 100vh; */
+  background: rgb(48, 102, 159);
+  background: radial-gradient(
+    circle,
+    rgba(48, 102, 159, 1) 0%,
+    rgba(7, 27, 55, 1) 100%
+  );
+  padding: 0.5rem 2rem;
+  border: 1px solid #d0e2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
