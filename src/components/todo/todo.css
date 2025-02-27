@@ -8,8 +8,9 @@
 }
 .todo-form {
   width: 47rem;
-  height: 15rem;
+  min-height: 10rem;
   display: flex;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
   border: 2px solid #6daaec7e;
@@ -26,27 +27,45 @@
   justify-content: space-around;
   /* margin: auto 4rem; */
 }
-.todo-delete-btn {
+.todo-btn , .action-btn {
   /* width: 20rem; */
   display: flex;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+ 
   /* margin: 1.3rem 0.2rem; */
 }
-.todo-delete-btn button {
-  width: 5rem;
+.todo-btn button {
+  width: auto;
   height: 2rem;
   border-radius: 5rem;
-  background-color: #0c3764;
+  
   color: #d0e2f5;
   font-size: 1rem;
   font-weight: 500;
-  border: 1px solid #0b315a;
+  
   box-shadow: 5px 5px 5px #011b36;
   /* margin: 1px 10px; */
 }
-.todo-delete-btn button:hover {
-  background-color: #072a50;
+.delete-btn button{
+    margin: 0 0.5rem;
+    background-color: #ad1818;
+    border: 1px solid #690c28;
 }
+.delete-btn button:hover {
+  background-color: #6e081e;
+}
+
+.update-btn button{
+    padding: 0 0.5rem;
+    margin: 0 0.2rem;
+    background-color:#0c3764;
+    border: 1px solid #072647;
+
+}
+.update-btn button:hover {
+    background-color: #072647;
+  }
 .from-control {
   margin: 20px 7px;
 }
@@ -63,14 +82,14 @@
   color: #d5e3f1;
   box-shadow: 7px 7px 5px #0e345c;
 }
-.todo-btn {
+.todos-btn {
   width: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
   margin: 1.3rem 0.2rem;
 }
-.todo-btn button {
+.todos-btn button {
   width: 10rem;
   height: 2.8rem;
   border-radius: 5rem;
@@ -82,7 +101,7 @@
   box-shadow: 5px 5px 5px #011b36;
   margin: 1px 10px;
 }
-.todo-btn button:hover {
+.todos-btn button:hover {
   background-color: #072a50;
 }
 .error-mes {
@@ -99,9 +118,12 @@
   align-items: center;
   margin: 2rem auto;
 }
+table{
+  margin: 2rem auto;
+}
 .todo-table {
-  width: 55rem;
-  min-height: 30rem;
+  width: 70rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,12 +134,8 @@
 .todo-table div {
   color: #d0e2f5;
 }
-table {
-  background-color: #0e345c;
- 
-}
+
 tr {
-  
   display: flex;
 }
 th,
@@ -137,3 +155,24 @@ td {
   align-items: center;
 }
 
+.todo-popup{
+    width: 9rem;
+    height: 4rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #4c8ed4;
+    border-radius: 1rem;
+    z-index: 1;
+    
+}
+.todo-popup li {
+    color: azure;
+    list-style-type: none;
+    font-weight: 500;
+}
+.todo-popup li:hover {
+    color: #03203f;
+}
+.todo-link-popup{
+    text-decoration: none;
+}

@@ -6,8 +6,8 @@
   align-items: center;
 }
 .signup-form {
-  width: 29rem;
-  height: 570px;
+  width: 32rem;
+  height: 43rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
   margin: 1.2rem;
 }
 .from-control input {
-  width: 18rem;
+  width: 21rem;
   height: 2.4rem;
   border-radius: 1.3rem;
   background-color: transparent;
@@ -45,14 +45,16 @@
 .signup-btn {
     width: 100%;
     display: flex;
+    /* justify-content: space-between; */
     text-align: center;
 }
 .signup-btn button {
     width: 18rem;
-    height: 3.5rem;
+    height: 3rem;
     border-radius: 5rem;
     background-color:#0c3764;
     color: #d0e2f5;
+    margin:0.5rem ;
     font-size: 1.3rem;
     font-weight: 500;
     border: 1px solid #0b315a;

@@ -7,7 +7,7 @@
 }
 .profile-form {
   width: 29rem;
-  height: 470px;
+  height: 540px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,12 +36,13 @@
   color: #d5e3f1;font-weight: 500;
   box-shadow: 7px 7px 5px #0e345c;
 }
-.profile-btn {
+.profile-btn, .account-btn {
   width: 100%;
   display: flex;
   text-align: center;
+  margin: 1rem 0;
 }
-.profile-btn button {
+.profile-btn button, .account-btn button {
   width: 18rem;
   height: 3.5rem;
   border-radius: 5rem;
@@ -52,7 +53,7 @@
   border: 1px solid #0b315a;
   box-shadow: 5px 5px 5px #011b36;
 }
-.profile-btn button:hover {
+.profile-btn button:hover, .account-btn button:hover {
   background-color: #072a50;
 }
 .profile-link {
