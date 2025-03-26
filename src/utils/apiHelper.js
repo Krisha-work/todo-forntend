@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 const getHeader = () => {
   const Token = localStorage.getItem("token");
   console.log("Token", Token);
@@ -11,12 +10,9 @@ const getHeader = () => {
 
 const instance = axios.create({
   baseURL: "http://localhost:3000/api/",
-  // Authorization: Token ? Token : "",
   validateStatus: () => true
-  // headers: header(),
 });
 
-// instance.defaults.headers.common['Authorization'] = Token ;
 
 // Add a request interceptor
 instance.interceptors.request.use(

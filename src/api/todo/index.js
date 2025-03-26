@@ -1,5 +1,3 @@
-// import instance from "../../utils/apiHelper";
-
 import instance from "../../utils/apiHelper";
 
 const ADD_TODO_POST_URL = "todo/todoadd";
