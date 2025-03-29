@@ -9,12 +9,16 @@ import "./myprofile.css";
 import { toastMessage } from "../../../utils/toastMessage.js";
 import Input from "../../common/Input.jsx";
 import Button from "../../common/Button.jsx";
+import { IoCamera } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 
 const MyProfile = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [clearStauts, setClearStauts] = useState(false);
+  const [profile, setProfile] = useState("");
+  const [profileFile, setProfileFile] = useState(null);
 
   const navigate = useNavigate();
 
@@ -24,6 +28,9 @@ const MyProfile = () => {
     setUsername(res.data.userData.username);
     setEmail(res.data.userData.email);
     setContact(res.data.userData.contact);
+    let profileImage = res.data.userData.profile_image
+    setProfileFile(profileImage);
+    localStorage.setItem("profile_image", profileImage)
   };
 
   useEffect(() => {
@@ -34,15 +41,30 @@ const MyProfile = () => {
 
   const handleProfileUpdateData = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("email", email);
+    formData.append("contact", contact);
+    formData.append("profile_image", profileFile);
+    
+    console.log(profileFile, "----*********------");
+    
+    // formData.append("profile_image", profileFile);
+    // console.log(formData, "--------------");
     if (clearStauts) {
-      const res = await updateUserRoute(id, {
-        username: username,
-        email: email,
-        contact: contact,
-      });
+      const res = await updateUserRoute(id, formData
+      //   {
+      //   username: username,
+      //   email: email,
+      //   contact: contact,
+      //   profile: profileFile,
+      // }
+    );
       console.log(res, "--------");
       toastMessage("success", res.data.message);
       setClearStauts(false);
+      handleProfiledata()
     }
   };
 
@@ -61,14 +83,53 @@ const MyProfile = () => {
     }
   };
 
+  const handleImg = (e) => {
+    const file = e.target.files[0];
+    console.log(file.name, "----------file");
+
+    if (file) {
+      const fileURL = URL.createObjectURL(file); 
+      // setProfile(fileURL);
+      setProfileFile(fileURL);
+    }
+  };
+
   return (
     <>
       <div className="profile-container">
         <div className="profile-form">
           <div>
-            <form onSubmit={handleProfileUpdateData}>
+            <form
+              onSubmit={handleProfileUpdateData}
+              encType="multipart/form-data"
+            >
               <div className="profile-header">
                 <h1>My Profile</h1>
+              </div>
+              <div className="profile-logo">
+                <div className="profile-image">
+                  {profileFile ? (
+                    <img src={profileFile} alt="Profile" />
+                  ) : (
+                    <div className="default-profile">
+                      <FaUser className="default-user-icon" />
+                    </div>
+                  )}
+                </div>
+                <div className="add-btn">
+                  <label htmlFor="profile_image">
+                    <IoCamera className="pro-icon" />
+                  </label>
+                  <input
+                    type="file"
+                    id="profile_image"
+                    style={{ display: "none" }}
+                    onChange={(e) => {
+                      handleImg(e);
+                      setClearStauts(true);
+                    }}
+                  />
+                </div>
               </div>
               <Input
                 type="text"

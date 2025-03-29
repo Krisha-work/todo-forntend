@@ -7,7 +7,7 @@
 }
 .profile-form {
   width: 29rem;
-  height: 540px;
+  height: 43rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,16 +33,19 @@
   border-radius: 1.3rem;
   background-color: transparent;
   border: 1px solid #6dabec;
-  color: #d5e3f1;font-weight: 500;
+  color: #d5e3f1;
+  font-weight: 500;
   box-shadow: 7px 7px 5px #0e345c;
 }
-.profile-btn, .account-btn {
+.profile-btn,
+.account-btn {
   width: 100%;
   display: flex;
   text-align: center;
   margin: 1rem 0;
 }
-.profile-btn button, .account-btn button {
+.profile-btn button,
+.account-btn button {
   width: 18rem;
   height: 3.5rem;
   border-radius: 5rem;
@@ -53,7 +56,8 @@
   border: 1px solid #0b315a;
   box-shadow: 5px 5px 5px #011b36;
 }
-.profile-btn button:hover, .account-btn button:hover {
+.profile-btn button:hover,
+.account-btn button:hover {
   background-color: #072a50;
 }
 .profile-link {
@@ -74,4 +78,58 @@
   text-align: center;
   margin: 0.4rem auto 0 auto;
   color: rgb(201, 57, 57);
+}
+
+.profile-logo {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-items: center;
+}
+.add-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #0f1e30;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  margin-top: -3rem;
+  margin-left: 12rem;
+}
+.pro-icon {
+  font-size: 1.3rem;
+  margin: 0.5rem;
+}
+.profile-image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin: 1rem;
+  border: 2px solid #6daaec7e;
+  box-shadow: 7px 7px 5px #0e345c;
+}
+.profile-image img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 2px solid #6daaec7e;
+  box-shadow: 7px 7px 5px #0e345c;
+}
+.default-profile {
+  width: 7rem;
+  height: 7rem;
+  background-color: #6dabec;
+  border: 2px solid #6daaec7e;
+  box-shadow: 7px 7px 5px #0e345c;
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 50%;
+}
+.default-user-icon{
+font-size: 4rem;
 }

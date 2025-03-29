@@ -8,10 +8,14 @@ import { toastMessage } from "../../../utils/toastMessage";
 const NavbarSection = () => {
   const [stauts, setStauts] = useState(false);
   const [proStauts, setProStauts] = useState(false);
+  const [profile, setProfile] = useState(null);
 
   const navigate = useNavigate();
 
   const Token = localStorage.getItem("token");
+  const profileImage = localStorage.getItem("profile_image")
+  console.log(profileImage,"-----image");
+  
 
   const requireToken = (e) => {
     e.preventDefault();
@@ -46,6 +50,7 @@ const NavbarSection = () => {
 
   useEffect(() => {
     userProfile();
+    setProfile(profileImage)
   });
 
   return (
@@ -55,7 +60,7 @@ const NavbarSection = () => {
           <div className="nav-container">
             <div>
               <Navbar.Brand as={Link} to="/">
-               <h3>Daily Task</h3> 
+                <h3>Daily Task</h3>
               </Navbar.Brand>
             </div>
             {proStauts ? (
@@ -65,9 +70,15 @@ const NavbarSection = () => {
                   setStauts(!stauts);
                 }}
               >
-                <div className="profile-icon">
-                  <FaUser className="picon" />
-                </div>
+                {profile ? (
+                  <div className="profile-icon">
+                    <img src={profile} alt="Profile" className="pimag"/>
+                  </div>
+                ) : (
+                  <div className="profile-icon">
+                    <FaUser className="picon" />
+                  </div>
+                )}
                 {stauts ? (
                   <div>
                     <div className="profile-popup">
